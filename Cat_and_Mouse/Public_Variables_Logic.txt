@@ -1,0 +1,32 @@
+Public WB As ThisWorkbook
+Public sheetPlay As Worksheet
+Public mapRange As Range
+Public enemyRange As Range
+Public heroName As string
+Public winCellRange As Range
+Public winCellCount As Integer
+Public winCellMaxPosX As Integer
+Public winCellMaxPoxY As Integer
+'Public enemies As New Collection 'Do I need this?
+Public maxEnemyCellCount
+Public attempts As Integer
+Public enemy As New create_character
+Public hero As New create_character
+Public rng As Range
+Public rand as Integer
+
+Public Sub PublicVariables()
+    Set sheetPlay = Worksheets("SheetPlay")
+    Set mapRange = sheetPlay.Range("A1:J10")
+    Set enemyRange = sheetPlay.Range("A1:J6")
+    heroName = "Chris"
+    Set winCellRange = sheetPlay.Range("G1:J3")
+    winCellCount = winCellRange.Count
+    winCellMaxPosX = winCellRange.Columns.Count
+    winCellMaxPosY = winCellRange.Rows.Count
+    maxEnemyCellCount = 60
+    attempts = 0
+    Set enemy = createEnemyEasyRando(enemy)
+    Set hero = createHero(hero, heroName)
+
+End Sub

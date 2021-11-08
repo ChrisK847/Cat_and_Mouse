@@ -1,0 +1,55 @@
+Spreadsheet opened
+
+
+One Time
+On Workbook_opened event 
+Call Public Variables(PV) to reduce passing arguments
+ Spreadsheet - worksheet
+ UserName - variable string
+ Map Dimensions - variable Range
+ Hero Created - Class, function, New Class Object
+ WinRange - Range
+ Enemy Created - Class, function, New Class Object
+Hero placed on Map - Sub using class initial x,yPos
+Win placed on Map - Sub
+Enemy Placed on Map - Sub using class initial x,yPos
+
+Sub
+User pushes directional button - Sub Buttons_
+Validate if Hero can successfully move
+If Moving
+  Are coordinates empty, enemy or win?
+  If enemy
+    Erase old Hero Mark
+    Set New Hero X,YPos at starting point.
+    Create New Hero Mark - Based on new x,yPos
+    Set new previous X,YPos to match starting pos
+  If Win
+    Erase old Hero Mark
+    New Hero X,YPos at staring point.
+    New Hero Mark - based on new x,yPos   
+    new enemy generated
+  If empty
+    Erase old Hero Mark
+    New Hero X,YPos using validated coordinates
+    New Hero Mark - based on x,yPos
+
+enemy's turn
+For Each enemy loop
+Simulated direction and distance generated randomly
+Validate if Enemy Can successfully move - Cannot move into Win, Enemy, Wall
+If Moving
+  Are Coordinates empty or hero
+  If hero
+    Erase Hero Mark
+    Set New Hero X,YPos at starting point.
+    Create New Hero Mark - Based on new x,yPos
+    Set new previous X,YPos to match starting pos
+    Erase enemy mark
+    Set new enemy x,yPos rand generator
+    Create new enemy mark - based on new x,yPos
+    Set new previous x,yPos to match new pos
+  If empty
+    Erase old enemy Mark
+    New enemy X,YPos using validated coordinates
+    New enemy Mark - based on x,yPos
