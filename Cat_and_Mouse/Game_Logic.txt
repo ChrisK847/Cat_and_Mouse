@@ -1,8 +1,6 @@
-Spreadsheet opened
+User opens Spreadsheet
 
-
-One Time
-On Workbook_opened event 
+New Game Button Clicked
 Call Public Variables(PV) to reduce passing arguments
  Spreadsheet - worksheet
  UserName - variable string
@@ -35,7 +33,7 @@ If Moving
     New Hero Mark - based on x,yPos
 
 enemy's turn
-For Each enemy loop
+loop - For Each enemy in enemies
 Simulated direction and distance generated randomly
 Validate if Enemy Can successfully move - Cannot move into Win, Enemy, Wall
 If Moving
